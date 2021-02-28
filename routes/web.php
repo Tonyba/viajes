@@ -24,6 +24,7 @@ Auth::routes();
 Route::get('/viaje/create', [$viajeController, 'create'])->name('viaje.create');
 Route::get('/viaje/{id}', [$viajeController, 'detail'])->name('viaje.detail');
 Route::post('/viaje/save', [$viajeController, 'save'])->name('viaje.save');
+Route::post('/viaje/actualizar/{id}', [$viajeController, 'update'] )->name('viaje.updates');
 
 Route::get('/deposito/index', [$depositoController, 'index'])->name('deposito.index');
 Route::get('/deposito/create', [$depositoController, 'create'])->name('deposito.create');

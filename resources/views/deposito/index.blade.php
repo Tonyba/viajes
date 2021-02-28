@@ -21,8 +21,15 @@
                 <tbody>
                     @foreach($depositos as $deposito)
                     <tr>
-                        <td class="align-middle">{{$deposito->fecha}}</td>
-                        <td class="align-middle">{{$deposito->cantidad}} mil Bs.F</td>
+                        <td class="align-middle">
+                            <input name="fecha" readonly class="form-control campo deposito-cantidad" type="date"
+                                value="{{$deposito->fecha}}">
+
+                        </td>
+                        <td class="align-middle">
+                            <input name="cantidad" readonly class="form-control campo deposito-cantidad" type="number"
+                                value="{{$deposito->cantidad}}">
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>
